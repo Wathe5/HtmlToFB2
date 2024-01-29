@@ -8,7 +8,7 @@ public class NovelTrimer
     public static void main(String[] args)
     {
         StringBuffer text = new StringBuffer("");
-        try(FileReader reader = new FileReader("E:\\SupremacyGames\\ShadowSlave294.fb2"))
+        try(FileReader reader = new FileReader("E:\\FB2 Books\\Blood_Warlock_Succubus_Partner_in_the_Apocalypse.fb2"))
         {
             // читаем посимвольно
             int c;
@@ -19,8 +19,8 @@ public class NovelTrimer
         catch(IOException ex){
             System.out.println(ex.getMessage());
         }
-        text = new StringBuffer(text.toString().replaceAll("&lt;/novelbiin&gt;", ""));
-        try (FileWriter writer = new FileWriter("E://SupremacyGames/ShadowSlave294.fb2"))
+        text = new StringBuffer(text.toString().replaceAll("<p>Really thank you very much to all those who send gifts to the novel and support with valuable Golden Tickets. I hope we can all keep it up &lt;3</p>", ""));
+        try (FileWriter writer = new FileWriter("E:\\FB2 Books\\Blood_Warlock_Succubus_Partner_in_the_Apocalypse.fb2"))
         {
             writer.write(text.toString());
         } catch (IOException e) {
